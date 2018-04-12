@@ -45,4 +45,10 @@ public class User {
     public void setTwitCount(Long twitCount) {
         this.twitCount = twitCount;
     }
+
+    @Override
+    public String toString() {
+        return String.format("User: id=%s, name=%s, email=%s, twit count=%d",
+                userId, name, email, twitCount == null ? 0L : twitCount);
+    }
 }
